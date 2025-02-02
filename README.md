@@ -1,71 +1,70 @@
-# 🧬 Protein-Protein Interaction Network Analysis
-📌 Overview
+### 🧬 Protein-Protein Interaction Network Analysis
+## 📌 Overview
 
 This repository contains an R script for constructing and analyzing Protein-Protein Interaction (PPI) networks using data from PubChem and the STRING database. The script retrieves interaction data, constructs a network, and applies k-means clustering for protein grouping.
 
-🔬 Methodology
+## 🔬 Methdology 
 
-Data Acquisition
+- Data Acquisition
 
-Retrieves protein lists from PubChem based on Reactome IDs.
+  - Retrieves protein lists from PubChem based on Reactome IDs.
 
-Queries the STRING database using httr in RStudio.
+  - Queries the STRING database using httr in RStudio.
 
-Loads interaction data in .tsv format.
+  - Loads interaction data in .tsv format.
 
-Network Construction
+- Network Construction
 
-Uses igraph to construct an undirected network.
+  - Uses igraph to construct an undirected network.
 
-Nodes represent proteins, edges represent interactions.
+  - Nodes represent proteins, edges represent interactions.
 
-Weights edges by interaction confidence scores.
+  - Weights edges by interaction confidence scores.
 
-Clustering Analysis (K-Means)
+- Clustering Analysis (K-Means)
 
-Uses stats::kmeans to cluster proteins.
+  - Uses stats::kmeans to cluster proteins.
 
-Positions nodes using Spring Layout (force-directed graph drawing).
+  - Positions nodes using Spring Layout (force-directed graph drawing).
 
-Assigns cluster-based colors for visualization.
+  - Assigns cluster-based colors for visualization.
 
-📦 Dependencies
-
+## 📦 Dependencies
 Ensure you have the following R libraries installed:
-
+```bash 
 install.packages(c("httr", "igraph", "readr", "stats"))
-
-🛠️ Usage
+```
+## 🛠️ Usage
 
 1️⃣ Clone this repository:
-
+```bash
 git clone https://github.com/claudiacastrillon/PPI_Network_Analysis.git
-
+```
 2️⃣ Navigate to the project folder:
-
+```bash 
 cd PPI_Network_Analysis
-
+```
 3️⃣ Run the R script:
-
+```bash
 source("PPI_network.r")
+```
+## 📊 Output
 
-📊 Output
+- PPI Network Visualization with nodes and edges.
 
-PPI Network Visualization with nodes and edges.
+- Clustering results with color-coded groups.
 
-Clustering results with color-coded groups.
+- .CSV File Analysis showing extracted protein interactions.
 
-.CSV File Analysis showing extracted protein interactions.
-
-🤝 Contributions
+## 🤝 Contributions
 
 Feel free to contribute by submitting pull requests or reporting issues!
 
-📜 License
+## 📜 License
 
 This project is open-source. See LICENSE for details.
 
-📩 Contact
+## 📩 Contact
 
 For inquiries, contact claudiacastrillon via GitHub. 💡
 
